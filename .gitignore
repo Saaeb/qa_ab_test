@@ -1,0 +1,24 @@
+# System & SageMaker files
+.aws/
+.cache/
+.config/
+.ipython/
+.jupyter/
+.keras/
+.kiro/
+.local/
+.npm/
+.sagemaker_sql_editor_api_cache/
+.sparkmagic/
+.virtual_documents/
+.bash_history
+.bashrc
+.gitconfig
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
