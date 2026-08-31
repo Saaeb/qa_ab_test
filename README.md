@@ -1,24 +1,27 @@
-## SageMaker Unified Studio Space
+## A/B Testing for Q&A System using BERT vs DistilBERT
 
-Welcome to your project space
-This is the root folder for your project files. It contains:
-- A shared folder for collaborative work
-- Your personal local folder for private development
+A/B Testing is a widely used experimentation technique to compare two versions of a system and determine which one performs better based on defined evaluation metrics.
+In this project, we apply A/B testing to compare two powerful NLP models — BERT (Control Group A) and DistilBERT (Treatment Group B) — for building an efficient Question & Answering (Q&A) system using the SQuAD dataset.
 
-### Personal local folder
-Your personal local folder:
-- Includes this root folder and any subfolders (except shared)
-- Allows you to work on files privately
-- Ideal for frequent file access and modification
-- Is visible only in this space
+The goal is to evaluate both models in terms of performance (Exact Match & F1-Score), efficiency, and overall effectiveness, and identify the better model for real-world deployment.
 
-### Shared folder
-The shared folder:
-- Contains files visible to all project members
-- Is accessible across all your tools
-- Updates immediately when any member adds or modifies files
-- Not well-suited for heavy file read/write workloads due to remote Amazon S3 origin of this folder and potential additional costs associated with frequent Amazon S3 access
-- If two individuals are modifying the same file in this folder at the same time that might result in losing some changes
+### Why A/B Testing in Machine Learning?
 
+- Helps validate model performance before production deployment
+- Ensures the new, lightweight model (DistilBERT) maintains acceptable accuracy compared to the baseline (BERT)
+- Prevents negative impact on system performance and speed
+- Provides statistically significant comparison using standard evaluation metrics
 
-To share your files with other project members, copy or move them to the shared folder when ready.
+## Execution Environment: AWS SageMaker
+
+Due to the heavy computational requirements of training and fine-tuning transformer models on the SQuAD dataset, this project was executed and scaled using **Amazon SageMaker Studio** notebooks and cloud instances.
+
+## Steps to Run
+
+The primary execution mode for this project is via IPython Notebooks (`QA_AB_testing.ipynb`).
+
+### Option A: Running via Amazon SageMaker (Cloud Setup - Recommended)
+1. Open your SageMaker Studio Space or upload the project files into a SageMaker Jupyter environment.
+2. Ensure the required dependencies are installed using the `requirements.txt` file:
+   ```bash
+   pip install -r requirements.txt
