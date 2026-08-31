@@ -1,24 +1,16 @@
-# System & SageMaker files
-.aws/
-.cache/
-.config/
-.ipython/
-.jupyter/
-.keras/
-.kiro/
-.local/
-.npm/
-.sagemaker_sql_editor_api_cache/
-.sparkmagic/
-.virtual_documents/
-.bash_history
-.bashrc
-.gitconfig
-
-# Python cache
+# Python & System caches
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.venv/
-env/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.DS_Store
+
+# Temporary generated script
+QA_AB_testing.py
+
+# Shared temporary folder
+shared/
+
+# Model checkpoints or temporary runs (if generated locally)
+runs/
+*.log
